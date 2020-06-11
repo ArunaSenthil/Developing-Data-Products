@@ -1,0 +1,33 @@
+---
+title: "Assignment1"
+author: "Aruna"
+date: "6/11/2020"
+output: ioslides_presentation
+runtime: shiny
+---
+
+## Developing Data Products-Week 2-Assignment
+
+### Chennai Map
+Let’s create a map that shows my city Chennai, India
+To do that, let’s first load the library Leaflet.
+
+```{r}
+library(leaflet)
+```
+
+Create the map of Paris
+```{r}
+my_map <- leaflet() %>%
+addTiles()
+my_map
+```
+
+```{r}
+Chennai <- c("<a href= 'http://en.wikipedia.org/wiki/Chennai' >Chennai</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=13.0827, lng=80.2707, popup = Chennai)
+```
+
+
